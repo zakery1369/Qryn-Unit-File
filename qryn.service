@@ -1,0 +1,12 @@
+[Unit]
+Description=qryn service
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/default/qryn_env
+Type=simple
+User=root
+ExecStart=qryn 
+
+[Install]
+WantedBy=multi-user.target
